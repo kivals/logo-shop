@@ -1,4 +1,78 @@
 //====================================================================================================
+header.header {
+  background: url("../img/bg_header.jpg") top no-repeat;
+}
+.top-header {
+  &__content {
+    display: flex;
+    align-items: center;
+  }
+  &__column {
+    flex: 0 1 50%;
+    &:nth-child(2) {
+      align-self: flex-start;
+      flex: 0 0 190px;
+      text-align: center;
+      padding: 25px 0 0 0;
+    }
+  }
+}
+.menu {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    li {
+      flex: 0 1 20%;
+      margin: 1px 0;
+    }
+  }
+  &__link {
+    transition: all 0.3s ease 0s;
+    font-family: 'Play', sans-serif;
+    white-space: nowrap;
+    text-decoration: underline;
+    color: #fff;
+    height: 27px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 22px;
+    @media (min-width: $md2+px) {
+      &:hover {
+        border-radius: 20px;
+        background-color: #068292;
+      }
+    }
+  }
+}
+.contacts-header {
+  display: flex;
+  justify-content: center;
+  &__column {
+    padding: 0 30px;
+    border-right: 1px solid #fff;
+    &:last-child {
+      border: 0;
+    }
+  }
+  &__item {
+    &_icon {
+      padding: 0 0 0 37px;
+      background: url("../img/icons/header/call.png") left no-repeat;
+    }
+  }
+  &__label {
+    font-size: 12px;
+    font-weight: 300;
+    color: #fff;
+    margin: 0 0 5px 0;
+  }
+  &__phone {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 900;
+  }
+}
 
 //====================================================================================================
 
