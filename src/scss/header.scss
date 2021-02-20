@@ -6,6 +6,7 @@ header.header {
   &__content {
     display: flex;
     align-items: center;
+    height: 90px;
   }
   &__column {
     flex: 0 1 50%;
@@ -71,6 +72,113 @@ header.header {
     color: #fff;
     font-size: 18px;
     font-weight: 900;
+  }
+}
+.bottom-header {
+  &__container {
+    height: 63px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__column {
+    flex: 0 1 calc(50% - 95px);
+  }
+}
+.actions-header {
+  display: flex;
+  align-items: center;
+  li {
+    margin-right: 54px;
+    @media (max-width: $maxWidthContainer + px) {
+      margin-right: 54 / $maxWidthContainer * 100vw;
+    }
+  }
+  &__login {
+    padding-left: 36px;
+    background: url('../img/icons/header/login.png') left no-repeat;
+    line-height: 24px;
+    display: inline-block;
+    color: #999999;
+    span {
+      border-bottom: 1px dotted;
+    }
+  }
+
+  &__reg {
+    padding-left: 36px;
+    background: url('../img/icons/header/user.png') left no-repeat;
+    line-height: 24px;
+    display: inline-block;
+    color: #1ab9ce;
+    span {
+      border-bottom: 1px dotted;
+    }
+  }
+
+  &__email {
+    padding-left: 36px;
+    background: url('../img/icons/header/mail.png') left no-repeat;
+    line-height: 13px;
+    display: inline-block;
+    color: #1ab9ce;
+    span {
+      border-bottom: 1px dotted;
+    }
+  }
+}
+
+.info-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__column {
+    padding-right: 54px;
+    @media (max-width: $maxWidthContainer + px) {
+      padding-right: 54 / $maxWidthContainer * 100vw;
+    }
+    &:last-child {
+      padding: 0;
+    }
+  }
+  &__callback {
+    background: url('../img/icons/header/call.png') left no-repeat;
+    display: inline-block;
+    color: #1ab9ce;
+    padding-left: 32px;
+    line-height: 20px;
+    span {
+      border-bottom: 1px dotted;
+    }
+  }
+  &__schedule {
+    background: url('../img/icons/header/schedule.png') left no-repeat;
+    padding-left: 37px;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 18px;
+    color: #999999;
+    span {
+      border-bottom: 900;
+    }
+  }
+  &__cart {
+    width: 43px;
+    height: 43px;
+    background: url('../img/icons/header/cart.png') left no-repeat;
+    display: inline-block;
+    position: relative;
+    span {
+      padding: 0 11px;
+      border-radius: 20px;
+      line-height: 25px;
+      background-color: #f68038;
+      position: absolute;
+      right: 0;
+      transform: translate(70%, 0px);
+      font-weight: 700;
+      color: #fff;
+    }
   }
 }
 
